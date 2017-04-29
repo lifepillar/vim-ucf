@@ -37,3 +37,11 @@ e.g.:
 ```vim
 let g:mucomplete#chains = { 'default': ['path', 'aggr'] }
 ```
+
+Alternatively, define `completeopt` and use the `'user'` completion method:
+
+```vim
+setl completefunc=ucf#aggregate#complete
+let g:mucomplete#chains = { 'default': ['path', 'user'] }
+```
+
