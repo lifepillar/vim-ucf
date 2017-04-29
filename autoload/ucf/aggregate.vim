@@ -19,7 +19,7 @@ endf
 fun! ucf#aggregate#collect(word)
   let l:suggestions = []
   for l:f in s:functions()
-    execute 'call' 'ucf#'.l:f.'#collect(a:word)'
+    execute 'call extend(l:suggestions,' 'ucf#'.l:f.'#collect(a:word))'
   endfor
   return l:suggestions
 endf
