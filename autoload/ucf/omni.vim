@@ -11,8 +11,10 @@ fun! s:findstart()
 endf
 
 fun! ucf#omni#collect(word)
+  let l:wv = winsaveview()
   execute 'call' &l:omnifunc.'(1,"")'
   execute 'let l:suggestions='.&l:omnifunc.'(0,a:word)'
+  call winrestview(l:wv)
   return l:suggestions
 endf
 

@@ -32,9 +32,7 @@ fun! ucf#aggregate#complete_add(word)
 endf
 
 fun! s:complete(word, col)
-  let l:wv = winsaveview()
   let l:suggestions = ucf#aggregate#collect(a:word)
-  call winrestview(l:wv)
   if !empty(l:suggestions)
     call complete(col('.') - len(a:word), l:suggestions)
   endif
