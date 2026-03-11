@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **As of March 11, 2026, this repository is on [Codeberg](https://codeberg.org/lifepillar/vim-ucf).**
+
 # Vim-ucf: User Completion Functions for Vim
 
 This plugin includes a collection of user-completion functions for Vim. It can
